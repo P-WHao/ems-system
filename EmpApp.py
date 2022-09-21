@@ -167,8 +167,9 @@ def delEmp():
         # FETCH ONLY ONE ROWS OUTPUT
         for result in cursor:
             print(result)
-
+        db_conn.commit()
     except Exception as e:
+        db_conn.rollback()
         return str(e)
 
     finally:
