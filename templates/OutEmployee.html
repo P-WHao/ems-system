@@ -25,16 +25,11 @@
         </div>
 
         <div class="outEmp">
-          <form action="/delemp/" method="POST" class="form-bubble">
-            <input
-              type="number"
-              name="emp_id"
-              placeholder="Enter an Employee ID"
-            />
-            <div class="cardOut">
-              <img src="{{" url }} />
-              <!--output-->
+          <div class="cardOut">
+            <img src="{{" url }} />
+            <!--output-->
 
+            <div>
               <h1 class="about">About</h1>
 
               <div class="info">
@@ -78,14 +73,13 @@
                 <h2 class="rightInfo">{{ result[6] }}</h2>
                 <!--output-->
               </div>
-
-              <a href="/delemp/">
-                <button type="submit" class="removeEmp">Remove Employee</button>
-              </a>
             </div>
-          </form>
+          </div>
         </div>
       </div>
+      <a href="/delemp/" name="emp_id">
+        <button type="submit" class="removeEmp">Remove Employee</button>
+      </a>
     </div>
   </body>
 </html>
