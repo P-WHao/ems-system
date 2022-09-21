@@ -126,7 +126,7 @@ def Employee():
     finally:
         cursor.close()
 
-    return render_template("OutEmployee.html", result=result) 
+    return render_template("OutEmployee.html", "SearchEmployee.html", result=result) 
     # , response=response
 
 # # Get Image From S3
