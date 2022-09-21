@@ -132,7 +132,7 @@ def Employee():
 # Delete Employee DONE
 
 
-@app.route("/delemp/")
+@app.route("/delemp/<emp_id>")
 def delEmp():
     # Get Employee
     emp_id = request.form['emp_id']
