@@ -1,18 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
 }
 
-ul{
+ul {
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     margin: 0;
     padding: 0;
     left: 5%;
 }
 
-ul li{
+ul li {
     list-style: none;
     width: 80px;
     height: 80px;
@@ -22,11 +22,11 @@ ul li{
     transition: .5s;
 }
 
-ul li:hover{
+ul li:hover {
     background: #555;
 }
 
-ul li span{
+ul li span {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -34,7 +34,7 @@ ul li span{
     transition: .5s;
 }
 
-ul li.prev span{
+ul li.prev span {
     top: 50%;
     left: 40%;
     transform: translateY(-50%) rotate(-45deg);
@@ -42,11 +42,11 @@ ul li.prev span{
     border-bottom: none;
 }
 
-ul li.prev:hover span{
-    left:16%;
+ul li.prev:hover span {
+    left: 16%;
 }
 
-ul li.prev span:before{
+ul li.prev span:before {
     content: '';
     top: 50%;
     position: absolute;
@@ -54,16 +54,16 @@ ul li.prev span:before{
     height: 4px;
     background: #fff;
     transform-origin: left;
-    transform: rotate(45deg) translate(-16px,-1px)scaleX(0);
+    transform: rotate(45deg) translate(-16px, -1px)scaleX(0);
     transition: .2s;
 }
 
-ul li.prev:hover span:before{
-    transform: rotate(45deg)translate(-16px,-1px)scaleX(1);
+ul li.prev:hover span:before {
+    transform: rotate(45deg)translate(-16px, -1px)scaleX(1);
 }
 
-.banner{
-    width:100%;
+.banner {
+    width: 100%;
     height: 100%;
     position: relative;
     /* overflow: hidden; */
@@ -71,27 +71,27 @@ ul li.prev:hover span:before{
     overflow: auto;
 }
 
-.slider{
-    width:100%;
+.slider {
+    width: 100%;
     height: 120vh;
-    position:abosolute;
-    top:0;
+    position: abosolute;
+    top: 0;
 }
 
-#slideImg{
-    width:100%;
+#slideImg {
+    width: 100%;
     height: 100%;
 }
 
-.overlay{
+.overlay {
     width: 100%;
     height: 120vh;
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     position: absolute;
     top: 0;
 }
 
-.empInfo{
+.empInfo {
     width: 800px;
     background-color: rgba(68, 67, 67, 0.7);
     margin: auto;
@@ -101,7 +101,7 @@ ul li.prev:hover span:before{
     border-radius: 15px 15px 0px 0px;
 }
 
-.inputMenu{
+.inputMenu {
     color: aliceblue;
     background-color: rgba(68, 67, 67, 0.5);
     width: 800px;
@@ -109,7 +109,7 @@ ul li.prev:hover span:before{
     margin: auto;
 }
 
-.inputSucess{
+.inputSucess {
     color: aliceblue;
     background-color: rgba(68, 67, 67, 0.5);
     width: 800px;
@@ -119,131 +119,136 @@ ul li.prev:hover span:before{
     justify-content: center;
 }
 
-form{
+form {
     padding: 10px;
 }
 
-#name{
+#name {
     width: 100%;
     height: 310px;
 }
 
-.name{
+.name {
     margin-left: 25px;
     margin-top: 30px;
     width: 125px;
-    font-size:18px;
-    font-weight:700;
+    font-size: 18px;
+    font-weight: 700;
 }
 
-.firstname{
+.firstname {
     position: relative;
-    left:200px;
-    top:-37px;
-    line-height:40px;
-    border-radius:6px;
-    padding:0 22px;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
     font-size: 16px;
 }
 
-.lastname{
-    position:relative;
-    left:417px;
-    top:-80px;
-    line-height:40px;
-    border-radius:6px;
-    padding:0 22px;
-    font-size:16px;
+.lastname {
+    position: relative;
+    left: 417px;
+    top: -80px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
     color: #555;
 }
 
-.firstlabel{
-    position:relative;
-    color:#E5E5E5;
-    text-transform:capitalize;
-    font-size:14px;
-    left:203px;
-    top:-45px;
+.firstlabel {
+    position: relative;
+    color: #E5E5E5;
+    text-transform: capitalize;
+    font-size: 14px;
+    left: 203px;
+    top: -45px;
 }
 
-.lastlabel{
-    position:relative;
-    color:#E5E5E5;
-    text-transform:capitalize;
-    font-size:14px;
-    left:175px;
-    top:-45px;
+.lastlabel {
+    position: relative;
+    color: #E5E5E5;
+    text-transform: capitalize;
+    font-size: 14px;
+    left: 175px;
+    top: -45px;
 }
 
-.empID, .gmail, .phone, .skill, .location, .picture{
-    position:relative;
-    left:200px;
-    top:-37px;
-    line-height:40px;
-    border-radius:6px;
-    padding:0 22px;
-    font-size:16px;
+.empID,
+.gmail,
+.phone,
+.skill,
+.location,
+.picture {
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
     color: #555;
     width: 480px;
 }
 
-.addEmp{
-    position:relative;
-    left:150px;
-    top:15px;
-    line-height:40px;
-    border-radius:6px;
-    padding:0 22px;
-    font-size:16px;
+.addEmp {
+    position: relative;
+    left: 150px;
+    top: 15px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
     color: black;
     width: 480px;
 }
 
-.wrapper{
+.wrapper {
     width: 725px;
     max-width: 100%;
     text-align: center;
-    font-size:18px;
-    font-weight:700;
+    font-size: 18px;
+    font-weight: 700;
 }
 
-.sucess{
+.sucess {
     width: 800px;
     position: relative;
 }
 
-.addAnotherEmp{
-    position:relative;
-    left:150px;
-    top:150px;
-    line-height:40px;
-    border-radius:6px;
-    padding:0 22px;
-    font-size:16px;
+.addAnotherEmp {
+    position: relative;
+    left: 150px;
+    top: 150px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
     color: black;
     width: 480px;
 }
 
-.removeAnotherEmp{
-    position:relative;
-    left:150px;
-    top:150px;
-    line-height:40px;
-    border-radius:6px;
-    padding:0 22px;
-    font-size:16px;
+.removeAnotherEmp {
+    position: relative;
+    left: 150px;
+    top: 150px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
     background: rgb(244, 139, 139);
     color: white;
     width: 480px;
 }
 
-.removeAnotherEmp:hover{
+.removeAnotherEmp:hover {
     background: red;
 }
 
-.wrapper .sucess .alert_icon{
+.wrapper .sucess .alert_icon {
     position: absolute;
-    
+
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
@@ -253,19 +258,19 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 2px rgba(0,0,0,0.05);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
 
 }
 
-.wrapper .sucess .alert_icon .icon{
+.wrapper .sucess .alert_icon .icon {
     display: block;
     font-size: 40px;
     padding: 5px;
     border-radius: 50%;
     color: green;
-  }
+}
 
-.icon_remove{
+.icon_remove {
     display: block;
     font-size: 40px;
     padding: 5px;
@@ -273,14 +278,14 @@ form{
     color: red;
 }
 
-.content_sucess{
+.content_sucess {
     position: absolute;
     top: 100px;
     left: 19%;
 }
 
 
-.removeEmp{
+.removeEmp {
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
@@ -294,26 +299,27 @@ form{
     right: 5%;
 }
 
-.removeEmp:hover{
+.removeEmp:hover {
     background: red;
 }
+
 /* search employee----------------------------- */
 
-.findEmp{
-    
+.findEmp {
+
     text-align: center;
     padding-top: 50px;
     color: aliceblue;
 }
 
-.searchMain{
+.searchMain {
     position: absolute;
-    top:20%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-.searchMain input{
+.searchMain input {
     border: 3px solid #E5E5E5;
     height: 40px;
     width: 300px;
@@ -321,8 +327,8 @@ form{
     padding: 0px 10px;
 }
 
-.btn{
-    position:absolute;
+.btn {
+    position: absolute;
     top: 0;
     right: 0;
     width: 60px;
@@ -333,14 +339,14 @@ form{
     border-radius: 50%;
 }
 
-.btn .fa{
+.btn .fa {
     position: absolute;
     top: 30%;
     left: 40%;
     transform: translate(-50% -50%);
 }
 
-.profile{
+.profile {
     padding-top: 10px;
     width: 100%;
     height: 100vh;
@@ -351,41 +357,44 @@ form{
     justify-content: center;
 }
 
-.card{
+.card {
     width: 90%;
     max-width: 440px;
     color: #fff;
     text-align: center;
     padding: 50px 35px;
-    border: 1px solid rgba(255,255,255,0.3);
-    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-    backdrop-filter: blur(5px) ;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
 }
 
-.card img{
+.card img {
     width: 140px;
     border-radius: 50%;
 }
 
-.card img, .cardOut img{
+.card img,
+.cardOut img {
     border-radius: 50%;
 }
 
-.card h2, .cardOut{
+.card h2,
+.cardOut {
     font-size: 40px;
     font-weight: 600;
     margin-top: 20px;
 }
 
-.card p, .cardOut{
+.card p,
+.cardOut {
     font-size: 18px;
     margin: 10px auto;
     max-width: 330px;
 }
 
-.btn_viewMore{
+.btn_viewMore {
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
@@ -399,7 +408,7 @@ form{
 
 /* output employee------------------------------------------ */
 
-.outEmp{
+.outEmp {
     width: 100%;
     height: 100vh;
     background-position: center;
@@ -409,7 +418,7 @@ form{
     justify-content: center;
 }
 
-.cardOut{
+.cardOut {
     width: 90%;
     max-width: 1300px;
     height: 65%;
@@ -417,39 +426,39 @@ form{
     /* text-align: center; */
     display: flex;
     padding: 50px 35px;
-    border: 1px solid rgba(255,255,255,0.3);
-    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-    backdrop-filter: blur(5px) ;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
 }
 
-.about{
+.about {
     padding-bottom: 30px;
     padding-left: 80px;
 }
 
-.info{
+.info {
     display: flex;
     padding: 15px;
     padding-left: 80px;
 }
 
-.rightInfo{
+.rightInfo {
     position: absolute;
     left: 70%;
 }
 
 /* calculate payroll------------------------------------------ */
-.overlayPay{
+.overlayPay {
     width: 100%;
     height: 120vh;
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     position: absolute;
     top: 0;
 }
 
-.inputMenuPay{
+.inputMenuPay {
     color: aliceblue;
     background-color: rgba(68, 67, 67, 0.5);
     width: 800px;

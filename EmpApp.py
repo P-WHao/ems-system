@@ -127,7 +127,7 @@ def Employee():
     finally:
         cursor.close()
 
-    return render_template("OutEmployee.html", result=result, url=url) 
+    return render_template("OutEmployee.html", result=result, url=url)
 
 # Delete Employee DONE
 
@@ -158,6 +158,7 @@ def delEmp():
         cursor1.close()
 
     return render_template('OutRemoveEmployee.html', result=result)
+
 
 # RMB TO CHANGE PORT NUMBER
 if __name__ == '__main__':
