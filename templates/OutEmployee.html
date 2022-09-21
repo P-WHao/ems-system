@@ -26,14 +26,15 @@
 
         <div class="outEmp">
           <div class="cardOut">
-            <img src="{{" url }} />
+            <img src={{ url }} />
             <!--output-->
 
             <div>
-              
+              <h1 class="about">About</h1>
+
               <div class="info">
                 <h2>Employee ID</h2>
-                <h2 class="rightInfo">{{ result[0] }}</h2>
+                <h2 class="rightInfo" id="myInput">{{ result[0] }}</h2>
                 <!--output-->
               </div>
 
@@ -72,19 +73,11 @@
                 <h2 class="rightInfo">{{ result[6] }}</h2>
                 <!--output-->
               </div>
+
+              <a href="/delemp/" name="emp_id">
+                <button type="submit" class="removeEmp">Remove Employee</button>
+              </a>
             </div>
-
-            <form action="/delemp/">
-              <input
-                class="empID"
-                type="number"
-                name="emp_id"
-                value="result[0]"
-                disabled
-              />
-
-              <button type="submit" class="removeEmp">Remove Employee</button>
-            </form>
           </div>
         </div>
       </div>
