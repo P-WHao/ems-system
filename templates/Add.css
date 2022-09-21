@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ul{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+    left: 5%;
+}
+
+ul li{
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    background: black;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+ul li:hover{
+    background: #555;
+}
+
+ul li span{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 4px solid #fff;
+    transition: .5s;
+}
+
+ul li.prev span{
+    top: 50%;
+    left: 40%;
+    transform: translateY(-50%) rotate(-45deg);
+    border-right: none;
+    border-bottom: none;
+}
+
+ul li.prev:hover span{
+    left:16%;
+}
+
+ul li.prev span:before{
+    content: '';
+    top: 50%;
+    position: absolute;
+    width: 38px;
+    height: 4px;
+    background: #fff;
+    transform-origin: left;
+    transform: rotate(45deg) translate(-16px,-1px)scaleX(0);
+    transition: .2s;
+}
+
+ul li.prev:hover span:before{
+    transform: rotate(45deg)translate(-16px,-1px)scaleX(1);
+}
+
+.banner{
+    width:100%;
+    height: 100%;
+    position: relative;
+    /* overflow: hidden; */
+    display: block;
+    overflow: auto;
+}
+
+.slider{
+    width:100%;
+    height: 120vh;
+    position:abosolute;
+    top:0;
+}
+
+#slideImg{
+    width:100%;
+    height: 100%;
+}
+
+.overlay{
+    width: 100%;
+    height: 120vh;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    position: absolute;
+    top: 0;
+}
+
+.empInfo{
+    width: 800px;
+    background-color: rgba(68, 67, 67, 0.7);
+    margin: auto;
+    color: white;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.inputMenu{
+    color: aliceblue;
+    background-color: rgba(68, 67, 67, 0.5);
+    width: 800px;
+    height: 800px;
+    margin: auto;
+}
+
+.inputSucess{
+    color: aliceblue;
+    background-color: rgba(68, 67, 67, 0.5);
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    padding: 10px;
+}
+
+#name{
+    width: 100%;
+    height: 310px;
+}
+
+.name{
+    margin-left: 25px;
+    margin-top: 30px;
+    width: 125px;
+    font-size:18px;
+    font-weight:700;
+}
+
+.firstname{
+    position: relative;
+    left:200px;
+    top:-37px;
+    line-height:40px;
+    border-radius:6px;
+    padding:0 22px;
+    font-size: 16px;
+}
+
+.lastname{
+    position:relative;
+    left:417px;
+    top:-80px;
+    line-height:40px;
+    border-radius:6px;
+    padding:0 22px;
+    font-size:16px;
+    color: #555;
+}
+
+.firstlabel{
+    position:relative;
+    color:#E5E5E5;
+    text-transform:capitalize;
+    font-size:14px;
+    left:203px;
+    top:-45px;
+}
+
+.lastlabel{
+    position:relative;
+    color:#E5E5E5;
+    text-transform:capitalize;
+    font-size:14px;
+    left:175px;
+    top:-45px;
+}
+
+.empID, .gmail, .phone, .skill, .location, .picture{
+    position:relative;
+    left:200px;
+    top:-37px;
+    line-height:40px;
+    border-radius:6px;
+    padding:0 22px;
+    font-size:16px;
+    color: #555;
+    width: 480px;
+}
+
+.addEmp{
+    position:relative;
+    left:150px;
+    top:15px;
+    line-height:40px;
+    border-radius:6px;
+    padding:0 22px;
+    font-size:16px;
+    color: black;
+    width: 480px;
+}
+
+.wrapper{
+    width: 725px;
+    max-width: 100%;
+    text-align: center;
+    font-size:18px;
+    font-weight:700;
+}
+
+.sucess{
+    width: 800px;
+    position: relative;
+}
+
+.addAnotherEmp{
+    position:relative;
+    left:150px;
+    top:150px;
+    line-height:40px;
+    border-radius:6px;
+    padding:0 22px;
+    font-size:16px;
+    color: black;
+    width: 480px;
+}
+
+.removeAnotherEmp{
+    position:relative;
+    left:150px;
+    top:150px;
+    line-height:40px;
+    border-radius:6px;
+    padding:0 22px;
+    font-size:16px;
+    background: rgb(244, 139, 139);
+    color: white;
+    width: 480px;
+}
+
+.removeAnotherEmp:hover{
+    background: red;
+}
+
+.wrapper .sucess .alert_icon{
+    position: absolute;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 2px rgba(0,0,0,0.05);
+
+}
+
+.wrapper .sucess .alert_icon .icon{
+    display: block;
+    font-size: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    color: green;
+  }
+
+.icon_remove{
+    display: block;
+    font-size: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    color: red;
+}
+
+.content_sucess{
+    position: absolute;
+    top: 100px;
+    left: 19%;
+}
+
+
+.removeEmp{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    background: rgb(244, 139, 139);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin: 30px 0 10px;
+    position: absolute;
+    right: 5%;
+}
+
+.removeEmp:hover{
+    background: red;
+}
+/* search employee----------------------------- */
+
+.findEmp{
+    
+    text-align: center;
+    padding-top: 50px;
+    color: aliceblue;
+}
+
+.searchMain{
+    position: absolute;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.searchMain input{
+    border: 3px solid #E5E5E5;
+    height: 40px;
+    width: 300px;
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+
+.btn{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    background-color: antiquewhite;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.btn .fa{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50% -50%);
+}
+
+.profile{
+    padding-top: 10px;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 90%;
+    max-width: 440px;
+    color: #fff;
+    text-align: center;
+    padding: 50px 35px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px) ;
+}
+
+.card img{
+    width: 140px;
+    border-radius: 50%;
+}
+
+.card img, .cardOut img{
+    border-radius: 50%;
+}
+
+.card h2, .cardOut{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.card p, .cardOut{
+    font-size: 18px;
+    margin: 10px auto;
+    max-width: 330px;
+}
+
+.btn_viewMore{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    background: #fff;
+    color: black;
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin: 30px 0 10px;
+}
+
+/* output employee------------------------------------------ */
+
+.outEmp{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardOut{
+    width: 90%;
+    max-width: 1300px;
+    height: 65%;
+    color: #fff;
+    /* text-align: center; */
+    display: flex;
+    padding: 50px 35px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px) ;
+}
+
+.about{
+    padding-bottom: 30px;
+    padding-left: 80px;
+}
+
+.info{
+    display: flex;
+    padding: 15px;
+    padding-left: 80px;
+}
+
+.rightInfo{
+    position: absolute;
+    left: 70%;
+}
+
+/* calculate payroll------------------------------------------ */
+.overlayPay{
+    width: 100%;
+    height: 120vh;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    position: absolute;
+    top: 0;
+}
+
+.inputMenuPay{
+    color: aliceblue;
+    background-color: rgba(68, 67, 67, 0.5);
+    width: 800px;
+    height: 450px;
+    margin: auto;
+}
