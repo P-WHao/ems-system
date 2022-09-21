@@ -26,7 +26,7 @@
 
         <div class="outEmp">
           <div class="cardOut">
-            <img src={{ url }} />
+            <img src="{{" url }} />
             <!--output-->
 
             <div>
@@ -75,13 +75,9 @@
               </div>
 
               <form action="/delemp/" method="POST">
-                <input type="hidden" name="emp_id" value="{{ result[0] }}">
-                <input type="submit" value="Remove Employee">
-            </form>
-
-              <!-- <a href="/delemp/" name="emp_id" value = "{{ result[0] }}">
-                <button type="submit" value = "{{ result[0] }}" class="removeEmp">Remove Employee</button>
-              </a> -->
+                <input type="hidden" name="emp_id" value="{{ result[0] }}" />
+                <input type="submit" value="Remove Employee" />
+              </form>
             </div>
           </div>
         </div>
