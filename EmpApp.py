@@ -156,19 +156,26 @@ def delEmp():
     # Get Employee
     emp_id = "12"
     # SELECT STATEMENT TO GET DATA FROM MYSQL
+    select_stmt = "SELECT * FROM employee WHERE emp_id = %(emp_id)s"
     delete_stmt = "DELETE FROM employee WHERE emp_id = %(emp_id)s"
     cursor = db_conn.cursor()
+    cursor1 = db_conn.cursor()
 
     try:
-        cursor.execute(delete_stmt, {'emp_id': int(emp_id)})
+        cursor.execute(select_stmt, {'emp_id': int(emp_id)})
+        cursor1.execute(delete_stmt, {'emp_id': int(emp_id)})
+        # FETCH ONLY ONE ROWS OUTPUT
+        for result in cursor:
+            print(result)
 
     except Exception as e:
         return str(e)
 
     finally:
         cursor.close()
+        cursor1.close()
 
-    return render_template('OutRemoveEmployee.html')
+    return render_template('OutRemoveEmployee.html', result=result)
 
 # RMB TO CHANGE PORT NUMBER
 if __name__ == '__main__':
