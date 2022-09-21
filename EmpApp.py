@@ -154,7 +154,7 @@ def Employee():
 @app.route("/delemp/")
 def delEmp():
     # Get Employee
-    emp_id = "12"
+    emp_id = request.form['emp_id']
     # SELECT STATEMENT TO GET DATA FROM MYSQL
     select_stmt = "SELECT * FROM employee WHERE emp_id = %(emp_id)s"
     delete_stmt = "DELETE FROM employee WHERE emp_id = %(emp_id)s"
