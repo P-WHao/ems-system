@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 import boto3
 from config import *
-from django.http import HttpResponse
+# from django.http import HttpResponse
 
 app = Flask(__name__)
 
@@ -109,10 +109,10 @@ def Employee():
     emp_id = request.form['emp_id']
     # SELECT STATEMENT TO GET DATA FROM MYSQL
     select_stmt = "SELECT * FROM employee WHERE emp_id = %(emp_id)s"
-    emp_image_file_name_in_s3 = "emp-id-" + str(emp_id) + "_image_file"
+    # emp_image_file_name_in_s3 = "emp-id-" + str(emp_id) + "_image_file"
     cursor = db_conn.cursor()
 
-    response = s3bucket_getfile("https://s3.console.aws.amazon.com/s3/buckets/phoonwenhao-employee?region=us-east-1&tab=objects")
+    # response = s3bucket_getfile("https://s3.console.aws.amazon.com/s3/buckets/phoonwenhao-employee?region=us-east-1&tab=objects")
 
     try:
         cursor.execute(select_stmt, {'emp_id': int(emp_id)})
@@ -126,26 +126,27 @@ def Employee():
     finally:
         cursor.close()
 
-    return render_template("OutEmployee.html", result=result, response=response)
+    return render_template("OutEmployee.html", result=result) 
+    # , response=response
 
-# Get Image From S3
-def s3bucket_getfile(file_path):
-    s3 = boto3.resource('s3')
+# # Get Image From S3
+# def s3bucket_getfile(file_path):
+#     s3 = boto3.resource('s3')
 
-    obj = s3.Object(custombucket, file_path)
+#     obj = s3.Object(custombucket, file_path)
 
-    try:
+#     try:
 
-        file_stream = obj.get()['Body'].read()
+#         file_stream = obj.get()['Body'].read()
 
-        if "png" in file_path:
-            response = HttpResponse(file_stream, content_type="image/jpeg")
+#         if "png" in file_path:
+#             response = HttpResponse(file_stream, content_type="image/jpeg")
 
-        response['Content-Disposition'] = 'filename=%s' % file_path
+#         response['Content-Disposition'] = 'filename=%s' % file_path
 
-        return response
-    except:
-        return False
+#         return response
+#     except:
+#         return False
 
 # RMB TO CHANGE PORT NUMBER
 if __name__ == '__main__':
