@@ -111,7 +111,7 @@ def Employee():
     emp_image_file_name_in_s3 = "emp-id-" + str(emp_id) + "_image_file"
     cursor = db_conn.cursor()
 
-    download_file(custombucket, emp_image_file_name_in_s3, os.path.join('.Files Download/', 'emp_image_file_name_in_s3.jpg'))
+    # download_file(custombucket, emp_image_file_name_in_s3, os.path.join('.Files Download/', 'emp_image_file_name_in_s3.jpg'))
 
     try:
         cursor.execute(select_stmt, {'emp_id': int(emp_id)})
