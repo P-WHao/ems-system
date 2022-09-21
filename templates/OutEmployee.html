@@ -74,9 +74,14 @@
                 <!--output-->
               </div>
 
-              <a href="/delemp/" name="emp_id" value = "{{ result[0] }}">
-                <button type="submit" class="removeEmp">Remove Employee</button>
-              </a>
+              <form action="/delemp/" method="POST">
+                <input type="text" name="emp_id">
+                <input type="submit" value="Remove Employee">
+            </form>
+
+              <!-- <a href="/delemp/" name="emp_id" value = "{{ result[0] }}">
+                <button type="submit" value = "{{ result[0] }}" class="removeEmp">Remove Employee</button>
+              </a> -->
             </div>
           </div>
         </div>
