@@ -26,7 +26,7 @@
 
         <div class="outEmp">
           <div class="cardOut">
-            <img src={{ url }} />
+            <img src="{{" url }} />
             <!--output-->
 
             <div>
@@ -73,8 +73,8 @@
                 <h2 class="rightInfo">{{ result[6] }}</h2>
                 <!--output-->
               </div>
-
-              <a href="/delemp/" name=emp_id>
+              <label id="emp_id"> {{result[0]}} </label>
+              <a href="/delemp/" name="emp_id">
                 <button type="submit" class="removeEmp">Remove Employee</button>
               </a>
             </div>
@@ -84,7 +84,3 @@
     </div>
   </body>
 </html>
-
-<script>
-  var emp_id = result[0];
-</script>
