@@ -1,62 +1,52 @@
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Employee Management System</title>
-    <link rel="stylesheet" href="https://phoonwenhao-employee.s3.amazonaws.com/Add.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
 
-  <body>
-    <div class="banner">
-      <div class="slider">
-        <img src="https://phoonwenhao-employee.s3.amazonaws.com/office.jpg" id="slideImg" />
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="https://phoonwenhao-employee.s3.amazonaws.com/Add.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <div class="banner">
+    <div class="slider">
+      <img src="https://phoonwenhao-employee.s3.amazonaws.com/office.jpg" id="slideImg" />
+    </div>
+    <div class="overlay">
+      <div class="findEmp">
+        <h1>Search Employee</h1>
+        <ul>
+          <li class="prev"><span></span></li>
+        </ul>
       </div>
-      <div class="overlay">
-        <div class="findEmp">
-          <h1>Search Employee</h1>
-          <ul>
-            <li class="prev"><span></span></li>
-          </ul>
-        </div>
 
-        <div class="searchMain">
-          <form
-            action="/getemp/results"
-            autocomplete="on"
-            method="POST"
-            class="form-bubble"
-          >
-            <input
-              type="number"
-              name="emp_id"
-              placeholder="Enter an Employee ID"
-            />
-            <a href="/getemp/results">
-                <button type="submit" class="form-button2"><i class="fa fa-search"></i></button>
-            </a>
-            
-          </form>
-        </div>
+      <div class="searchMain">
+        <form action="/getemp/results" autocomplete="on" method="POST" class="form-bubble">
+          <input type="number" name="emp_id" placeholder="Enter an Employee ID" />
+          <a href="/getemp/results">
+            <button type="submit" class="form-button2"><i class="fa fa-search"></i></button>
+          </a>
 
-        <div class="profile">
-          <div class="card">
-            <img src="https://phoonwenhao-employee.s3.amazonaws.com/add.png" />
-            <!--output-->
-            <h2>Dah Feng</h2>
-            <!--output-->
-            <p>
-              Work for company 20 seconds still alive... Hate Coding but still
-              work with IT related works.
-            </p>
-            <!--output-->
+        </form>
+      </div>
 
-            <a href="#" class="btn_viewMore">View More</a>
-          </div>
+      <div class="profile">
+        <div class="card">
+          <img src="https://phoonwenhao-employee.s3.amazonaws.com/add.png" />
+          <!--output-->
+          <h2>Dah Feng</h2>
+          <!--output-->
+          <p>
+            Work for company 20 seconds still alive... Hate Coding but still
+            work with IT related works.
+          </p>
+          <!--output-->
+
+          <a href="#" class="btn_viewMore">View More</a>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
