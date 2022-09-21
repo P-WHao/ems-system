@@ -4,6 +4,7 @@ from datetime import datetime
 import os
 import boto3
 from config import *
+from django.http import HttpResponse
 
 app = Flask(__name__)
 
@@ -111,7 +112,7 @@ def Employee():
     emp_image_file_name_in_s3 = "emp-id-" + str(emp_id) + "_image_file"
     cursor = db_conn.cursor()
 
-    response = s3bucket_getfile()
+    response = s3bucket_getfile("https://s3.console.aws.amazon.com/s3/buckets/phoonwenhao-employee?region=us-east-1&tab=objects")
 
     try:
         cursor.execute(select_stmt, {'emp_id': int(emp_id)})
@@ -131,16 +132,16 @@ def Employee():
 def s3bucket_getfile(file_path):
     s3 = boto3.resource('s3')
 
-    obj = s3.Object(custombucket, "https://s3.console.aws.amazon.com/s3/buckets/phoonwenhao-employee?region=us-east-1&tab=objects")
+    obj = s3.Object(custombucket, file_path)
 
     try:
 
         file_stream = obj.get()['Body'].read()
 
-        if "png" in "https://s3.console.aws.amazon.com/s3/buckets/phoonwenhao-employee?region=us-east-1&tab=objects":
+        if "png" in file_path:
             response = HttpResponse(file_stream, content_type="image/jpeg")
 
-        response['Content-Disposition'] = 'filename=%s' % "https://s3.console.aws.amazon.com/s3/buckets/phoonwenhao-employee?region=us-east-1&tab=objects"
+        response['Content-Disposition'] = 'filename=%s' % file_path
 
         return response
     except:
