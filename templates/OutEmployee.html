@@ -27,35 +27,40 @@
                     <div>
                 
                         <h1 class="about">About</h1>
-                    
-                        <div class="info">
-                            <h2>Full Name</h2>
-                            <h2 class="rightInfo">Dah Feng</h2> <!--output-->
-                        </div>
 
                         <div class="info">
                             <h2>Employee ID</h2>
-                            <h2 class="rightInfo">123476</h2> <!--output-->
+                            <h2 class="rightInfo">{{ result[0] }}</h2> <!--output-->
                         </div>
                         
                         <div class="info">
+                            <h2>First Name</h2>
+                            <h2 class="rightInfo">{{ result[1] }}</h2> <!--output-->
+                        </div>
+
+                        <div class="info">
+                            <h2>Last Name</h2>
+                            <h2 class="rightInfo">{{ result[2] }}</h2> <!--output-->
+                        </div>
+
+                        <div class="info">
                             <h2>Gmail</h2>
-                            <h2 class="rightInfo">hahaha@gmail.com</h2> <!--output-->
+                            <h2 class="rightInfo">{{ result[3] }}</h2> <!--output-->
                         </div>
                       
                         <div class="info">
                             <h2>Contact Number</h2>
-                            <h2 class="rightInfo">0124598257</h2> <!--output-->
+                            <h2 class="rightInfo">{{ result[4] }}</h2> <!--output-->
                         </div>
 
                         <div class="info">
                             <h2>Primary Skill</h2>
-                            <h2 class="rightInfo">Late</h2> <!--output-->
+                            <h2 class="rightInfo">{{ result[5] }}</h2> <!--output-->
                         </div>
 
                         <div class="info">
                             <h2>Location</h2>
-                            <h2 class="rightInfo">No.28, Jalan Ali, Taman Abu</h2> <!--output-->
+                            <h2 class="rightInfo">{{ result[6] }}</h2> <!--output-->
                         </div>
                         <button type="submit" class="removeEmp">Remove Employee</button>
                     </div>
