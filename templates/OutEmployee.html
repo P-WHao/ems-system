@@ -75,7 +75,7 @@
               </div>
 
               <form action="/delemp" method="POST" class="form-bubble">
-                <input type="number" name="emp_id" />
+                <input type="number" name="emp_id" value = "{{ result[0] }}"/>
                 <a href="/delemp/">
                   <button type="submit" class="removeEmp">
                     Remove Employee
