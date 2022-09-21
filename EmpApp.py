@@ -111,7 +111,7 @@ def Employee():
     emp_image_file_name_in_s3 = "emp-id-" + str(emp_id) + "_image_file"
     cursor = db_conn.cursor()
 
-    # download_file(custombucket, emp_image_file_name_in_s3, os.path.join('.Files Download/', 'emp_image_file_name_in_s3.jpg'))
+    response = s3bucket_getfile()
 
     try:
         cursor.execute(select_stmt, {'emp_id': int(emp_id)})
@@ -125,7 +125,26 @@ def Employee():
     finally:
         cursor.close()
 
-    return render_template("OutEmployee.html", result=result)
+    return render_template("OutEmployee.html", result=result, response=response)
+
+# Get Image From S3
+def s3bucket_getfile(file_path):
+    s3 = boto3.resource('s3')
+
+    obj = s3.Object(custombucket, "https://s3.console.aws.amazon.com/s3/buckets/phoonwenhao-employee?region=us-east-1&tab=objects")
+
+    try:
+
+        file_stream = obj.get()['Body'].read()
+
+        if "png" in "https://s3.console.aws.amazon.com/s3/buckets/phoonwenhao-employee?region=us-east-1&tab=objects":
+            response = HttpResponse(file_stream, content_type="image/jpeg")
+
+        response['Content-Disposition'] = 'filename=%s' % "https://s3.console.aws.amazon.com/s3/buckets/phoonwenhao-employee?region=us-east-1&tab=objects"
+
+        return response
+    except:
+        return False
 
 # RMB TO CHANGE PORT NUMBER
 if __name__ == '__main__':
