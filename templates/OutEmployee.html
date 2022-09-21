@@ -26,7 +26,7 @@
 
         <div class="outEmp">
           <div class="cardOut">
-            <img src={{ url }} />
+            <img src="{{" url }} />
             <!--output-->
 
             <div>
@@ -74,10 +74,18 @@
                 <!--output-->
               </div>
 
-              <a href="/delemp/">
-                <button type="submit" class="removeEmp">Remove Employee</button>
-              </a>
-              
+              <form action="/delemp/" method="POST" class="form-bubble">
+                <input
+                  type="number"
+                  name="emp_id"
+                  placeholder="Enter an Employee ID"
+                />
+                <a href="/delemp/">
+                  <button type="submit" class="removeEmp">
+                    Remove Employee
+                  </button>
+                </a>
+              </form>
             </div>
           </div>
         </div>
