@@ -26,57 +26,64 @@
 
         <div class="outEmp">
           <div class="cardOut">
-            <img src={{ url }} />
+            <img src="{{" url }} />
             <!--output-->
 
             <div>
-              <h1 class="about">About</h1>
+              <form
+                action="/delemp/"
+                autocomplete="on"
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <h1 class="about">About</h1>
 
-              <div class="info">
-                <h2>Employee ID</h2>
-                <h2 class="rightInfo" id="myInput">{{ result[0] }}</h2>
-                <!--output-->
-              </div>
+                <div class="info">
+                  <h2>Employee ID</h2>
+                  <h2 class="rightInfo">{{ result[0] }}</h2>
+                  <!--output-->
+                </div>
 
-              <div class="info">
-                <h2>First Name</h2>
-                <h2 class="rightInfo">{{ result[1] }}</h2>
-                <!--output-->
-              </div>
+                <div class="info">
+                  <h2>First Name</h2>
+                  <h2 class="rightInfo">{{ result[1] }}</h2>
+                  <!--output-->
+                </div>
 
-              <div class="info">
-                <h2>Last Name</h2>
-                <h2 class="rightInfo">{{ result[2] }}</h2>
-                <!--output-->
-              </div>
+                <div class="info">
+                  <h2>Last Name</h2>
+                  <h2 class="rightInfo">{{ result[2] }}</h2>
+                  <!--output-->
+                </div>
 
-              <div class="info">
-                <h2>Gmail</h2>
-                <h2 class="rightInfo">{{ result[3] }}</h2>
-                <!--output-->
-              </div>
+                <div class="info">
+                  <h2>Gmail</h2>
+                  <h2 class="rightInfo">{{ result[3] }}</h2>
+                  <!--output-->
+                </div>
 
-              <div class="info">
-                <h2>Contact Number</h2>
-                <h2 class="rightInfo">{{ result[4] }}</h2>
-                <!--output-->
-              </div>
+                <div class="info">
+                  <h2>Contact Number</h2>
+                  <h2 class="rightInfo">{{ result[4] }}</h2>
+                  <!--output-->
+                </div>
 
-              <div class="info">
-                <h2>Primary Skill</h2>
-                <h2 class="rightInfo">{{ result[5] }}</h2>
-                <!--output-->
-              </div>
+                <div class="info">
+                  <h2>Primary Skill</h2>
+                  <h2 class="rightInfo">{{ result[5] }}</h2>
+                  <!--output-->
+                </div>
 
-              <div class="info">
-                <h2>Location</h2>
-                <h2 class="rightInfo">{{ result[6] }}</h2>
-                <!--output-->
-              </div>
+                <div class="info">
+                  <h2>Location</h2>
+                  <h2 class="rightInfo">{{ result[6] }}</h2>
+                  <!--output-->
+                </div>
 
-              <a href="/delemp/" name="emp_id">
-                <button type="submit" id = "myButton" class="removeEmp">Remove Employee</button>
-              </a>
+                <input class="empID" type="number" name="emp_id" value="result[0]" disabled />
+
+                <button type="submit" class="removeEmp">Remove Employee</button>
+              </form>
             </div>
           </div>
         </div>
@@ -84,6 +91,3 @@
     </div>
   </body>
 </html>
-<script>
-    document.querySelector('#myButton').addEventListener('click', evt => fetch('/post/' + document.querySelector('#myInput').value))
-</script>
