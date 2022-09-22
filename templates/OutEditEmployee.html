@@ -1,0 +1,48 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Employee Management System</title>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <link rel="stylesheet" href="https://phoonwenhao-employee.s3.amazonaws.com/Add.css" />
+</head>
+
+<body>
+  <div class="banner">
+    <div class="slider">
+      <img src="https://phoonwenhao-employee.s3.amazonaws.com/office.jpg" id="slideImg" />
+    </div>
+    <div class="overlay">
+      <div class="empInfo">
+        <h1>Employee Edited Sucesfully!</h1>
+        <a href="/">
+          <ul>
+            <li class="prev"><span></span></li>
+          </ul>
+        </a>
+      </div>
+
+      <div class="inputSucess">
+        <div class="wrapper">
+          <div class="sucess">
+            <div class="alert_icon">
+              <ion-icon name="checkmark-circle-outline" class="icon"></ion-icon>
+            </div>
+
+            <div class="content_sucess">
+              <p class="title">
+                Following employee had edited sucesfully into employee database
+              </p>
+              <p class="sucess_info">{{ name }}</p>
+            </div>
+          </div>
+        </div>
+        <a href="/addemp/">
+          <button type="submit" class="addAnotherEmp">Add Again</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

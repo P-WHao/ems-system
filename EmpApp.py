@@ -204,6 +204,36 @@ def disEditEmp():
 
     return render_template("EditEmployee.html", result=result)
 
+
+# Edit Employee Details
+@app.route('/diseditemp/todo', methods=['GET', 'POST'])
+def disEditEmp():
+    # Get Employee
+    emp_id = request.form['emp_id']
+    first_name = request.form['first_name']
+    last_name = request.form['last_name']
+    gmail = request.form['gmail']
+    phone_number = request.form['phone_number']
+    pri_skill = request.form['pri_skill']
+    location = request.form['location']
+
+    update_sql = "UPDATE employee SET first_name = %s, last_name = %s, gmail = %s, phone_number = %s, pri_skill = %s, location = %s WHERE emp_id = %s"
+    cursor = db_conn.cursor()
+
+    try:
+        cursor.execute(update_sql, (first_name, last_name, gmail, phone_number, pri_skill, location, emp_id))
+        db_conn.commit()
+        
+        emp_name = "" + first_name + " " + last_name
+
+    except Exception as e:
+        return str(e)
+
+    finally:
+        cursor.close()
+
+    return render_template('OutEditEmployee.html', name=emp_name)
+
 # RMB TO CHANGE PORT NUMBER
 if __name__ == '__main__':
     # or setting host to '0.0.0.0'
