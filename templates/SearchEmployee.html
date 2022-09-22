@@ -21,9 +21,9 @@
       </div>
 
       <div class="searchMain">
-        <form action="{{url_for('getEmp')}}" autocomplete="on" method="POST" class="form-bubble">
+        <form action="/getemp/results" autocomplete="on" method="POST" class="form-bubble">
           <input type="number" name="emp_id" placeholder="Enter an Employee ID" />
-          <a href="{{url_for('getEmp')}}">
+          <a href="/getemp/results">
             <button type="submit" class="form-button2"><i class="fa fa-search"></i></button>
           </a>
 
@@ -34,7 +34,7 @@
         <div class="card">
           <img src="https://phoonwenhao-employee.s3.amazonaws.com/static/img/add.png" />
           <!--output-->
-          <h2>{{ results[0] }}</h2>
+          <h2>Dah Feng</h2>
           <!--output-->
           <p>
             Work for company 20 seconds still alive... Hate Coding but still

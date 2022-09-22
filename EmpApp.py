@@ -1,5 +1,5 @@
 from curses import flash
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request
 from pymysql import connections
 import pymysql
 from datetime import datetime
@@ -105,26 +105,7 @@ def Emp():
 
 @app.route("/getemp/")
 def getEmp():
-    emp_id = request.form['emp_id']
-    select_stmt = "SELECT * FROM employee WHERE emp_id = %(emp_id)s"   
-    cursor = db_conn.cursor()
-
-    key = "emp-id-" + str(emp_id) + "_image_file.png"
-
-    url = "https://%s.s3.amazonaws.com/%s" % (custombucket, key)
-
-    try:
-        cursor.execute(select_stmt, {'emp_id': int(emp_id)})
-        # FETCH ONLY ONE ROWS OUTPUT
-        for result in cursor:
-            print(result)
-
-    except Exception as e:
-        return str(e)
-
-    finally:
-        cursor.close()
-    return redirect(url('getEmp'), result=result)
+    return render_template('SearchEmployee.html')
 
 # Get Employee Results
 
