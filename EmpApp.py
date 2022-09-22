@@ -1,6 +1,7 @@
 from curses import flash
 from flask import Flask, render_template, request
 from pymysql import connections
+import pymysql
 from datetime import datetime
 import os
 import boto3
@@ -173,17 +174,10 @@ def delEmp():
 def displayAllEmp():
     # SELECT STATEMENT TO GET DATA FROM MYSQL
     select_stmt = "SELECT * FROM employee"
-    cursor = db_conn.cursor()
-
-    try:
-        cursor.execute(select_stmt)
-        data = cursor.fetchall()
-
-    except Exception as e:
-        return str(e)
-
-    finally:
-        cursor.close()
+    cursor = db_conn.cursor(pymysql.cursors.DictCursor)
+    cursor.execute(select_stmt)
+    data = cursor.fetchall()
+    cursor.close()
     return render_template('DisplayAllEmployee.html', employee=data)
 
 
