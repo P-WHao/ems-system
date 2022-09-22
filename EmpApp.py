@@ -83,7 +83,7 @@ def Emp():
                 s3_location = ''
             else:
                 s3_location = '-' + s3_location
-
+                
             if returnQuery == 1:
                 object_url = "https://s3{0}.amazonaws.com/{1}/{2}/{3}".format(
                     s3_location,
