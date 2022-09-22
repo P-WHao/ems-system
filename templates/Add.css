@@ -219,6 +219,7 @@ form {
 
 .addAnotherEmp {
     position: relative;
+    cursor:pointer;
     left: 150px;
     top: 150px;
     line-height: 40px;
