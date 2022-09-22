@@ -59,7 +59,7 @@ def Emp():
 
     try:
         returnQuery = cursor.execute(insert_sql, (emp_id, first_name,
-                                    last_name, gmail, phone_number, pri_skill, location))
+                                                  last_name, gmail, phone_number, pri_skill, location))
         db_conn.commit()
         # return 0 is not added, 1 is added
         print(returnQuery)
@@ -99,8 +99,7 @@ def Emp():
         return render_template('OutAddEmployee.html', name=emp_name)
     else:
         return render_template('OutAddEmployeeFail.html', id=emp_id)
-    
-    
+
 
 # Get Employee DONE
 
@@ -177,7 +176,8 @@ def displayAllEmp():
     data = cursor.fetchall()
 
     cursor.close()
-    return render_template('DisplayAllEmployee.html', employee = data)
+    return render_template('SearchEmployee.html', employee=data)
+
 
 # RMB TO CHANGE PORT NUMBER
 if __name__ == '__main__':
