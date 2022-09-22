@@ -55,7 +55,7 @@ def Emp():
 
     if emp_image_file.filename == "":
         return "Please select a file"
-
+        
     try:
         cursor.execute(insert_sql, (emp_id, first_name,
                                     last_name, gmail, phone_number, pri_skill, location))
