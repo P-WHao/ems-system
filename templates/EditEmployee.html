@@ -22,11 +22,11 @@
       </div>
 
       <div class="inputMenu">
-        <form action="/diseditemp/edit" autocomplete="on" method="POST" enctype="multipart/form-data">
+        <form action="/diseditemp/edit{{result[0]}}" autocomplete="on" method="POST" enctype="multipart/form-data">
           <div id="name">
             <!-- Input Employee ID -->
             <h2 class="name" for="emp_id">Employee ID</h2>
-            <input class="empID" type="number" name="emp_id" autofocus value="{{ result[0] }}" required />
+            <input class="empID" type="number" name="emp_id" autofocus value="{{ result[0] }}" disabled required />
 
             <!-- Input Employee Name -->
             <h2 class="name">Name</h2>

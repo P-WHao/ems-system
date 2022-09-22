@@ -206,10 +206,10 @@ def disEditEmp():
 
 
 # Edit Employee Details
-@app.route('/diseditemp/edit', methods=['GET', 'POST'])
-def disEditAEmp():
+@app.route('/diseditemp/edit<id>', methods=['GET', 'POST'])
+def disEditAEmp(id):
     # Get Employee
-    emp_id = request.form['emp_id']
+    # emp_id = request.form['emp_id']
     first_name = request.form['first_name']
     last_name = request.form['last_name']
     gmail = request.form['gmail']
@@ -221,7 +221,7 @@ def disEditAEmp():
     cursor = db_conn.cursor()
 
     try:
-        cursor.execute(update_sql, (first_name, last_name, gmail, phone_number, pri_skill, location, emp_id))
+        cursor.execute(update_sql, (first_name, last_name, gmail, phone_number, pri_skill, location, id))
         db_conn.commit()
         
         emp_name = "" + first_name + " " + last_name
