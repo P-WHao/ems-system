@@ -171,11 +171,19 @@ def delEmp():
 # Display all Employee in Table
 @app.route('/displayallemp/')
 def displayAllEmp():
+    # SELECT STATEMENT TO GET DATA FROM MYSQL
+    select_stmt = "SELECT * FROM employee WHERE emp_id"
     cursor = db_conn.cursor()
-    cursor.execute('SELECT * FROM employee')
     data = cursor.fetchall()
 
-    cursor.close()
+    try:
+        cursor.execute(select_stmt)
+
+    except Exception as e:
+        return str(e)
+
+    finally:
+        cursor.close()
     return render_template('DisplayAllEmployee.html', employee=data)
 
 
