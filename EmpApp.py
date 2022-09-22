@@ -202,7 +202,7 @@ def disEditEmp():
     finally:
         cursor.close()
 
-    return render_template("OutEmployee.html", result=result)
+    return render_template("EditEmployee.html", result=result)
 
 # RMB TO CHANGE PORT NUMBER
 if __name__ == '__main__':
