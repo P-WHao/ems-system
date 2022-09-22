@@ -6,7 +6,6 @@ from datetime import datetime
 import os
 import boto3
 from config import *
-# from django.http import HttpResponse
 
 app = Flask(__name__)
 
@@ -31,14 +30,14 @@ table = 'employee'
 def home():
     return render_template("Homepage.html")
 
-# ADD EMPLOYEE DONE
+# ADD EMPLOYEE
 
 
 @app.route("/addemp/", methods=['GET', 'POST'])
 def addEmp():
     return render_template("AddEmployee.html")
 
-# EMPLOYEE OUTPUT
+# ADD EMPLOYEE OUTPUT (DISPLAY MESSAGE)
 
 
 @app.route("/addemp/results", methods=['GET', 'POST'])
@@ -76,6 +75,9 @@ def Emp():
                 s3.Bucket(custombucket).put_object(Key=emp_image_file_name_in_s3, Body=emp_image_file)
                 bucket_location = boto3.client('s3').get_bucket_location(Bucket=custombucket)
                 s3_location = (bucket_location['LocationConstraint'])
+
+                # Display System Message
+                flash('Employee Added Successfully')
 
                 if s3_location is None:
                     s3_location = ''
