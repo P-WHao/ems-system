@@ -58,9 +58,10 @@ def Emp():
         return "Please select a file"
 
     try:
-        cursor.execute(insert_sql, (emp_id, first_name,
+        return1 = cursor.execute(insert_sql, (emp_id, first_name,
                                     last_name, gmail, phone_number, pri_skill, location))
         db_conn.commit()
+        print(return1)
         emp_name = "" + first_name + " " + last_name
 
         # Uplaod image file in S3 #
