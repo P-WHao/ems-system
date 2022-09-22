@@ -75,7 +75,7 @@ def Emp():
             if returnQuery == 1:
                 print("Data inserted in MySQL RDS... uploading image to S3...")
                 s3.Bucket(custombucket).put_object(Key=emp_image_file_name_in_s3, Body=emp_image_file)
-                bucket_location = boto3.client('s3').get_bucket_location(Folder=customfolder)
+                bucket_location = boto3.client('s3').get_bucket_location(Bucket=customfolder)
                 s3_location = (bucket_location['LocationConstraint'])
                 # s3.Bucket(custombucket).put_object(Key=emp_image_file_name_in_s3, Body=emp_image_file)
                 # bucket_location = boto3.client('s3').get_bucket_location(Bucket=custombucket)
