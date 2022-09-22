@@ -176,7 +176,7 @@ def displayAllEmp():
     data = cursor.fetchall()
 
     cursor.close()
-    return render_template('SearchEmployee.html', employee=data)
+    return render_template('DisplayAllEmployee.html', employee=data)
 
 
 # RMB TO CHANGE PORT NUMBER
