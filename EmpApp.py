@@ -123,7 +123,8 @@ def Employee():
     url = "https://%s.s3.amazonaws.com/%s" % (custombucket, key)
 
     try:
-        cursor.execute(select_stmt, {'emp_id': int(emp_id)})
+        returnResp = cursor.execute(select_stmt, {'emp_id': int(emp_id)})
+        print(returnResp)
         # FETCH ONLY ONE ROWS OUTPUT
         for result in cursor:
             print(result)
