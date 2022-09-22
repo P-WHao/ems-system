@@ -75,7 +75,7 @@ def Emp():
             s3.Bucket(custombucket).put_object(
                 Key=emp_image_file_name_in_s3, Body=emp_image_file)
             bucket_location = boto3.client(
-                's3').get_bucket_location(Bucket=custombucket)
+                's3').get_bucket_location("phoonwenhao-employee/employee-image")
             s3_location = (bucket_location['LocationConstraint'])
 
             if s3_location is None:
@@ -84,7 +84,8 @@ def Emp():
                 s3_location = '-' + s3_location
 
             if returnQuery == 1:
-                object_url = "https://{0}.s3.amazonaws.com/employee-image/{1}".format(
+                object_url = "https://s3{0}.amazonaws.com/{1}/{2}".format(
+                    s3_location,
                     custombucket,
                     emp_image_file_name_in_s3)
 
