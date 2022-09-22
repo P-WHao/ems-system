@@ -75,6 +75,11 @@
               <input type="hidden" name="emp_id" value="{{ result[0] }}">
               <input type="submit" value="Remove Employee">
             </form>
+
+            <form action="/diseditemp/" method="POST">
+              <input type="hidden" name="emp_id" value="{{ result[0] }}">
+              <input type="submit" value="Edit Employee">
+            </form>
           </div>
         </div>
       </div>

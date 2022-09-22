@@ -181,6 +181,29 @@ def displayAllEmp():
     return render_template('DisplayAllEmployee.html', employee=data)
 
 
+# Edit Employee Details
+@app.route('/diseditemp/', methods=['GET', 'POST'])
+def disEditEmp():
+    # Get Employee
+    emp_id = request.form['emp_id']
+    # SELECT STATEMENT TO GET DATA FROM MYSQL
+    select_stmt = "SELECT * FROM employee WHERE emp_id = %(emp_id)s"
+    cursor = db_conn.cursor()
+
+    try:
+        cursor.execute(select_stmt, {'emp_id': int(emp_id)})
+        # FETCH ONLY ONE ROWS OUTPUT
+        for result in cursor:
+            print(result)
+
+    except Exception as e:
+        return str(e)
+
+    finally:
+        cursor.close()
+
+    return render_template("OutEmployee.html", result=result)
+
 # RMB TO CHANGE PORT NUMBER
 if __name__ == '__main__':
     # or setting host to '0.0.0.0'

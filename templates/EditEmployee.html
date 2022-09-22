@@ -1,0 +1,66 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="https://phoonwenhao-employee.s3.amazonaws.com/Add.css" />
+</head>
+
+<body>
+  <div class="banner">
+    <div class="slider">
+      <img src="https://phoonwenhao-employee.s3.amazonaws.com/office.jpg" id="slideImg" />
+    </div>
+    <div class="overlay">
+      <div class="empInfo">
+        <h1>Employee Information</h1>
+        <a href="/">
+          <ul>
+            <li class="prev"><span></span></li>
+          </ul>
+        </a>
+      </div>
+
+      <div class="inputMenu">
+        <form action="/addemp/results" autocomplete="on" method="POST" enctype="multipart/form-data">
+          <div id="name">
+            <!-- Input Employee ID -->
+            <h2 class="name" for="emp_id">Employee ID</h2>
+            <input class="empID" type="number" name="emp_id" autofocus value="{{ result[0] }}" disable required />
+
+            <!-- Input Employee Name -->
+            <h2 class="name">Name</h2>
+
+            <!-- Input Employee First Name -->
+            <input class="firstname" type="text" name="first_name" autofocus value="{{ result[1] }}" required /><br />
+            <label class="firstlabel" for="first_name">first name</label>
+
+            <!-- Input Employee Last Name -->
+            <input class="lastname" type="text" name="last_name" autofocus value="{{ result[2] }}" required />
+            <label class="lastlabel" for="last_name">last name</label>
+
+            <!-- Input Employee Gmail -->
+            <h2 class="name" for="gmail">Gmail</h2>
+            <input class="gmail" type="email" name="gmail" autofocus value="{{ result[3] }}" required />
+
+            <!-- Input Employee Phone Number -->
+            <h2 class="name" for="phone_number">Phone Number</h2>
+            <input class="phone" type="number" name="phone_number" autofocus value="{{ result[4] }}" required />
+
+            <!-- Input Employee Primary Skill -->
+            <h2 class="name" for="pri_skill">Primary Skill</h2>
+            <input class="skill" type="text" name="pri_skill" autofocus value="{{ result[5] }}" required />
+
+            <!-- Input Employee Location -->
+            <h2 class="name" for="location">Location</h2>
+            <input class="location" type="text" name="location" autofocus value="{{ result[6] }}" required />
+
+            <button type="submit" class="addEmp">Edit Employee</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
