@@ -85,8 +85,7 @@ def Emp():
                 s3_location = '-' + s3_location
                 
             if returnQuery == 1:
-                object_url = "https://s3{0}.amazonaws.com/{1}/{2}/{3}".format(
-                    s3_location,
+                object_url = "https://{0}.s3.amazonaws.com/{1}/{2}".format(
                     custombucket,
                     customfolder,
                     emp_image_file_name_in_s3)
