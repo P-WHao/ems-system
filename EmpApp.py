@@ -206,7 +206,7 @@ def disEditEmp():
 
 
 # Edit Employee Details
-@app.route('/diseditemp/todo', methods=['GET', 'POST'])
+@app.route('/diseditemp/edit', methods=['GET', 'POST'])
 def disEditEmp():
     # Get Employee
     emp_id = request.form['emp_id']
