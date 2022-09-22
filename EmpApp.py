@@ -95,9 +95,9 @@ def Emp():
 
     print("all modification done...")
     if returnQuery == 1:
-        return render_template('OutAddEmployee.html', name=emp_name)
+        return render_template('AddEmployeeOut.html', name=emp_name)
     else:
-        return render_template('OutAddEmployeeFail.html', id=emp_id)
+        return render_template('AddEmployeeOutFail.html', id=emp_id)
 
 
 # Get Employee DONE
@@ -135,9 +135,9 @@ def Employee():
         cursor.close()
 
     if returnResp == 1:
-        return render_template("OutEmployee.html", result=result, url=url)
+        return render_template("SearchEmployeeOut.html", result=result, url=url)
     else:
-        return render_template('OutAddEmployeeFail.html', id=emp_id)
+        return render_template('SearchEmployeeOutFail.html', id=emp_id)
     
 
 # Delete Employee DONE
@@ -168,7 +168,7 @@ def delEmp():
         cursor.close()
         cursor1.close()
 
-    return render_template('OutRemoveEmployee.html', result=result)
+    return render_template('RemoveEmployeeOut.html', result=result)
 
 
 # Display all Employee in Table
@@ -234,7 +234,7 @@ def disEditAEmp(id):
     finally:
         cursor.close()
 
-    return render_template('OutEditEmployee.html', name=emp_name)
+    return render_template('EditEmployeeOut.html', name=emp_name)
 
 # RMB TO CHANGE PORT NUMBER
 if __name__ == '__main__':
