@@ -169,6 +169,16 @@ def delEmp():
     return render_template('OutRemoveEmployee.html', result=result)
 
 
+# Display all Employee in Table
+@app.route('/displayallemp/')
+def displayAllEmp():
+    cursor = db_conn.cursor()
+    cursor.execute('SELECT * FROM employee')
+    data = cursor.fetchall()
+
+    cursor.close()
+    return render_template('DisplayAllEmployee', employee = data)
+
 # RMB TO CHANGE PORT NUMBER
 if __name__ == '__main__':
     # or setting host to '0.0.0.0'
