@@ -135,7 +135,11 @@ def Employee():
     finally:
         cursor.close()
 
-    return render_template("OutEmployee.html", result=result, url=url)
+    if returnResp == 1:
+        return render_template("OutEmployee.html", result=result, url=url)
+    else:
+        return 0
+    
 
 # Delete Employee DONE
 
