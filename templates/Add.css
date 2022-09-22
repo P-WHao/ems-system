@@ -202,6 +202,7 @@ form {
     font-size: 16px;
     color: black;
     width: 480px;
+    cursor: pointer;
 }
 
 .wrapper {
