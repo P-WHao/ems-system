@@ -172,7 +172,7 @@ def delEmp():
 @app.route('/displayallemp/')
 def displayAllEmp():
     # SELECT STATEMENT TO GET DATA FROM MYSQL
-    select_stmt = "SELECT * FROM employee WHERE emp_id"
+    select_stmt = "SELECT * FROM employee"
     cursor = db_conn.cursor()
 
     try:
