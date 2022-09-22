@@ -21,9 +21,9 @@
       </div>
 
       <div class="searchMain">
-        <form action="/getemp/results" autocomplete="on" method="POST" class="form-bubble">
+        <form action="{{url_for('getEmp')}}" autocomplete="on" method="POST" class="form-bubble">
           <input type="number" name="emp_id" placeholder="Enter an Employee ID" />
-          <a href="/getemp/results">
+          <a href="{{url_for('getEmp')}}">
             <button type="submit" class="form-button2"><i class="fa fa-search"></i></button>
           </a>
 
