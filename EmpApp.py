@@ -138,7 +138,7 @@ def Employee():
     if returnResp == 1:
         return render_template("OutEmployee.html", result=result, url=url)
     else:
-        return 0
+        return render_template('OutAddEmployeeFail.html', id=emp_id)
     
 
 # Delete Employee DONE
