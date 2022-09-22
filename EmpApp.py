@@ -118,13 +118,12 @@ def Employee():
     select_stmt = "SELECT * FROM employee WHERE emp_id = %(emp_id)s"
     cursor = db_conn.cursor()
 
-    key = "emp-id-" + str(emp_id) + "_image_file.png"
+    key = "employee-image/emp-id-" + str(emp_id) + "_image_file.png"
 
     url = "https://%s.s3.amazonaws.com/%s" % (custombucket, key)
 
     try:
         returnResp = cursor.execute(select_stmt, {'emp_id': int(emp_id)})
-        print(returnResp)
         # FETCH ONLY ONE ROWS OUTPUT
         for result in cursor:
             print(result)
