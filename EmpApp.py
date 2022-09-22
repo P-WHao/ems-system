@@ -174,10 +174,10 @@ def displayAllEmp():
     # SELECT STATEMENT TO GET DATA FROM MYSQL
     select_stmt = "SELECT * FROM employee WHERE emp_id"
     cursor = db_conn.cursor()
-    data = cursor.fetchall()
 
     try:
         cursor.execute(select_stmt)
+        data = cursor.fetchall()
 
     except Exception as e:
         return str(e)
