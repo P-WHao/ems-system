@@ -351,7 +351,7 @@ form {
     border-radius: 6px;
     padding: 0 22px;
     font-size: 16px;
-    background: rgb(244, 139, 139);
+    background: red;
     color: white;
     width: 480px;
     cursor: pointer;
@@ -365,7 +365,7 @@ form {
     border-radius: 6px;
     padding: 0 22px;
     font-size: 16px;
-    background: rgb(244, 139, 139);
+    background: red;
     color: white;
     width: 200px;
     cursor: pointer;
@@ -390,25 +390,25 @@ form {
 }
 
 .removeAnotherEmp:hover {
-    background: red;
+    background: rgb(244, 139, 139);
 }
 
 .btn_dltEmp:hover {
-    background: red;
+    background: rgb(244, 139, 139);
 }
 
 .wrapper .sucess .alert_icon {
     position: absolute;
-
-    left: 56%;
-    transform: translateX(-50%);
     width: 80px;
     height: 80px;
     background: #fff;
     border-radius: 50%;
+    left: 44%;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
+    justify-items: center;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
 
 }
@@ -432,7 +432,10 @@ form {
 .content_sucess {
     position: absolute;
     top: 100px;
-    left: 19%;
+    left: 20%;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 
@@ -441,7 +444,7 @@ form {
     display: inline-block;
     font-size: 18px;
     font-weight: 500;
-    background: rgb(244, 139, 139);
+    background: red;
     color: white;
     padding: 10px 30px;
     border-radius: 30px;
@@ -451,7 +454,8 @@ form {
 }
 
 .removeEmp:hover {
-    background: red;
+    background: rgb(244, 139, 139);
+    
 }
 
 /* search employee----------------------------- */
