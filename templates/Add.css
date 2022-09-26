@@ -697,21 +697,3 @@ thead tr td {
 th, td{
     padding: 5px;
 }
-
-.btn_backHomeviewall {
-    position: relative;
-    cursor: pointer;
-    left: 230px;
-    top: 150px;
-    line-height: 40px;
-    border-radius: 6px;
-    padding: 0 22px;
-    font-size: 16px;
-    background: rgb(103, 102, 101);
-    color: white;
-    width: 480px;
-}
-
-.btn_backHomeviewall:hover {
-    background: black;
-}
