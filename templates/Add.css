@@ -238,12 +238,9 @@ form {
 }
 
 .wrapper {
-    width: 725px;
-    max-width: 100%;
     text-align: center;
     font-size: 18px;
     font-weight: 700;
-    display: flex;
 }
 
 .sucess {
@@ -566,6 +563,7 @@ form {
 
 .table{
     background-color:#555;
+    width: 100%;
     
 }
 

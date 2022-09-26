@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Employee Management System</title>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <link rel="stylesheet" href="https://phoonwenhao-employee.s3.amazonaws.com/static/css/Add.css" />
+    <link rel="stylesheet" href="Add.css" />
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                     <li><a href="/displayallemp/">View All</a></li>
                 </ul>
             </div>
-            <div class="empInfo_display">
+            <div class="empInfo_display empInfo">
                 <h1>All Employee Information!</h1>
                 <a href="/">
                     <ul>
@@ -54,10 +54,6 @@
                                 <td>{{data.phone_number}}</td>
                                 <td>{{data.pri_skill}}</td>
                                 <td>{{data.location}}</td>
-                                <!-- <td width="130">
-                                    <a href="/edit/{{data.id}}" class="btn btn-secondary btn-sm">edit</a>
-                                    <a href="/delete/{{data.id}}" class="btn btn-danger btn-delete btn-sm">delete</a>
-                                </td> -->
                             </tr>
                             <!-- {% endfor %} -->
                         </tbody>
