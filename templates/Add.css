@@ -5,6 +5,65 @@
     
 }
 
+.findEmp ul {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    left: 5%;
+}
+
+.findEmp ul li {
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    background: black;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.findEmp ul li:hover {
+    background: #555;
+}
+
+.findEmp ul li span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 4px solid #fff;
+    transition: .5s;
+}
+
+.findEmp ul li.prev span {
+    top: 50%;
+    left: 40%;
+    transform: translateY(-50%) rotate(-45deg);
+    border-right: none;
+    border-bottom: none;
+}
+
+
+.findEmp ul li.prev:hover span {
+    left: 16%;
+}
+
+.findEmp ul li.prev span:before {
+    content: '';
+    top: 50%;
+    position: absolute;
+    width: 38px;
+    height: 4px;
+    background: #fff;
+    transform-origin: left;
+    transform: rotate(45deg) translate(-16px, -1px)scaleX(0);
+    transition: .2s;
+}
+
+.findEmp ul li.prev:hover span:before {
+    transform: rotate(45deg)translate(-16px, -1px)scaleX(1);
+}
+
 .empInfo ul {
     position: absolute;
     transform: translate(-50%, -50%);
