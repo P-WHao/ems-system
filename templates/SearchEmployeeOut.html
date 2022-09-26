@@ -7,11 +7,17 @@
 </head>
 
 <body>
+
   <div class="banner">
     <div class="slider">
       <img src="https://phoonwenhao-employee.s3.amazonaws.com/static/img/office.jpg" id="slideImg" />
     </div>
     <div class="overlay">
+      <ul class="add_bar">
+        <li><a href="/addemp/">Add</a></li>
+        <li><a href="/getemp/">Search</a></li>
+        <li><a href="/displayallemp/">View All</a></li>
+      </ul>
       <div class="findEmp">
         <h1>Found Employee</h1>
 
@@ -75,12 +81,12 @@
 
             <form action="/delemp/" method="POST">
               <input type="hidden" name="emp_id" value="{{ result[0] }}">
-              <input type="submit" value="Remove Employee">
+              <input type="submit" value="Remove Employee" class="btn_dltEmp">
             </form>
 
             <form action="/diseditemp/" method="POST">
               <input type="hidden" name="emp_id" value="{{ result[0] }}">
-              <input type="submit" value="Edit Employee">
+              <input type="submit" value="Edit Employee" class="editEmp">
             </form>
           </div>
         </div>

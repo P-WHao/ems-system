@@ -8,11 +8,17 @@
 </head>
 
 <body>
+
   <div class="banner">
     <div class="slider">
       <img src="https://phoonwenhao-employee.s3.amazonaws.com/static/img/office.jpg" id="slideImg" />
     </div>
     <div class="overlay">
+      <ul class="add_bar">
+        <li><a href="/addemp/">Add</a></li>
+        <li><a href="/getemp/">Search</a></li>
+        <li><a href="/displayallemp/">View All</a></li>
+      </ul>
       <div class="findEmp">
         <h1>Search Employee</h1>
         <a href="/">
@@ -24,26 +30,13 @@
 
       <div class="searchMain">
         <form action="/getemp/results" autocomplete="on" method="POST" class="form-bubble">
-          <input type="number" name="emp_id" placeholder="Enter an Employee ID" min="1" autofocus required/>
+          <input type="number" name="emp_id" placeholder="Enter an Employee ID" min="1" autofocus required />
           <a href="/getemp/results">
             <button type="submit" class="form-button2"><i class="fa fa-search"></i></button>
           </a>
 
         </form>
       </div>
-
-      <!-- Can't Do -->
-      <!-- <div class="profile">
-        <div class="card">
-          <img src="https://phoonwenhao-employee.s3.amazonaws.com/static/img/add.png" />
-          <h2>Dah Feng</h2>
-          <p>
-            Work for company 20 seconds still alive... Hate Coding but still
-            work with IT related works.
-          </p>
-          <a href="#" class="btn_viewMore">View More</a>
-        </div>
-      </div> -->
     </div>
   </div>
 </body>

@@ -2,9 +2,10 @@
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
+    
 }
 
-ul {
+.empInfo ul {
     position: absolute;
     transform: translate(-50%, -50%);
     margin: 0;
@@ -12,7 +13,7 @@ ul {
     left: 5%;
 }
 
-ul li {
+.empInfo ul li {
     list-style: none;
     width: 80px;
     height: 80px;
@@ -22,11 +23,11 @@ ul li {
     transition: .5s;
 }
 
-ul li:hover {
+.empInfo ul li:hover {
     background: #555;
 }
 
-ul li span {
+.empInfo ul li span {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -34,7 +35,7 @@ ul li span {
     transition: .5s;
 }
 
-ul li.prev span {
+.empInfo ul li.prev span {
     top: 50%;
     left: 40%;
     transform: translateY(-50%) rotate(-45deg);
@@ -42,11 +43,12 @@ ul li.prev span {
     border-bottom: none;
 }
 
-ul li.prev:hover span {
+
+.empInfo ul li.prev:hover span {
     left: 16%;
 }
 
-ul li.prev span:before {
+.empInfo ul li.prev span:before {
     content: '';
     top: 50%;
     position: absolute;
@@ -58,7 +60,7 @@ ul li.prev span:before {
     transition: .2s;
 }
 
-ul li.prev:hover span:before {
+.empInfo ul li.prev:hover span:before {
     transform: rotate(45deg)translate(-16px, -1px)scaleX(1);
 }
 
@@ -73,7 +75,7 @@ ul li.prev:hover span:before {
 
 .slider {
     width: 100%;
-    height: 120vh;
+    height: 135vh;
     position: abosolute;
     top: 0;
 }
@@ -85,14 +87,29 @@ ul li.prev:hover span:before {
 
 .overlay {
     width: 100%;
-    height: 120vh;
+    height: 135vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     position: absolute;
     top: 0;
 }
 
+.testing{
+    height: 100px;
+
+}
+
 .empInfo {
     width: 800px;
+    background-color: rgba(68, 67, 67, 0.7);
+    margin: auto;
+    color: white;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.empInfo_display {
+    width: 950px;
     background-color: rgba(68, 67, 67, 0.7);
     margin: auto;
     color: white;
@@ -113,6 +130,16 @@ ul li.prev:hover span:before {
     color: aliceblue;
     background-color: rgba(68, 67, 67, 0.5);
     width: 800px;
+    height: 800px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputDisplay{
+    color: aliceblue;
+    background-color: rgba(68, 67, 67, 0.5);
+    width: 950px;
     height: 800px;
     margin: auto;
     align-items: center;
@@ -200,9 +227,14 @@ form {
     border-radius: 6px;
     padding: 0 22px;
     font-size: 16px;
-    color: black;
+    background: rgb(103, 102, 101);
+    color: white;
     width: 480px;
     cursor: pointer;
+}
+
+.addEmp:hover{
+   background: black;
 }
 
 .wrapper {
@@ -211,11 +243,30 @@ form {
     text-align: center;
     font-size: 18px;
     font-weight: 700;
+    display: flex;
 }
 
 .sucess {
     width: 800px;
     position: relative;
+}
+
+.btn_backHome{
+    position: relative;
+    cursor:pointer;
+    left: 230px;
+    top: 150px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    background: rgb(103, 102, 101);
+    color: white;
+    width: 480px;
+}
+
+.btn_backHome:hover{
+    background: black;
 }
 
 .addAnotherEmp {
@@ -227,8 +278,13 @@ form {
     border-radius: 6px;
     padding: 0 22px;
     font-size: 16px;
-    color: black;
+    background: rgb(103, 102, 101);
+    color: white;
     width: 480px;
+}
+
+.addAnotherEmp:hover{
+    background: black;
 }
 
 .removeAnotherEmp {
@@ -242,16 +298,53 @@ form {
     background: rgb(244, 139, 139);
     color: white;
     width: 480px;
+    cursor: pointer;
+}
+
+.btn_dltEmp{
+    position: absolute;
+    left: 85%;
+    top: 105%;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    background: rgb(244, 139, 139);
+    color: white;
+    width: 200px;
+    cursor: pointer;
+}
+
+.editEmp{
+    position: absolute;
+    top: 105%;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    background: rgb(103, 102, 101);
+    color: white;
+    width: 200px;
+    left: 0%;
+    cursor: pointer;
+}
+
+.editEmp:hover {
+    background: black;
 }
 
 .removeAnotherEmp:hover {
     background: red;
 }
 
+.btn_dltEmp:hover {
+    background: red;
+}
+
 .wrapper .sucess .alert_icon {
     position: absolute;
 
-    left: 50%;
+    left: 56%;
     transform: translateX(-50%);
     width: 80px;
     height: 80px;
@@ -373,13 +466,16 @@ form {
 }
 
 .card img {
-    width: 140px;
+    width: 600px;
+    height: 500px;
     border-radius: 50%;
 }
 
 .card img,
 .cardOut img {
     border-radius: 50%;
+    height: 500px;
+    width: 600px;
 }
 
 .card h2,
@@ -467,3 +563,41 @@ form {
     height: 450px;
     margin: auto;
 }
+
+.table{
+    background-color:#555;
+    
+}
+
+.add_bar{
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    text-align: center;
+    
+
+}
+
+.add_bar li {
+    display: inline-block;
+  }
+  
+.add_bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+.add_bar li a:hover {
+    background-color: #111;
+  }
+
+  
+ .form-button2{
+    background-color: aqua;
+ }
