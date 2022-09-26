@@ -230,17 +230,19 @@ form {
     border-radius: 6px;
     padding: 0 22px;
     font-size: 16px;
+    width: 28%;
 }
 
 .lastname {
     position: relative;
-    left: 417px;
-    top: -80px;
+    left: 395px;
+    top: -81px;
     line-height: 40px;
     border-radius: 6px;
     padding: 0 22px;
     font-size: 16px;
     color: #555;
+    width: 28%;
 }
 
 .firstlabel {
