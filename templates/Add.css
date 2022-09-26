@@ -599,5 +599,16 @@ form {
 
   
  .form-button2{
-    background-color: aqua;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    background: rgb(103, 102, 101);
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
  }
+
+ .form-button2:hover {
+    background: rgba(110, 110, 110, 0.404);
+}
