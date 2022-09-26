@@ -665,7 +665,6 @@ form {
 }
 
 .table {
-    margin-top: 10px;
     width: 100%;
 }
 
@@ -687,4 +686,8 @@ tbody tr:nth-child(even) {
 
 thead tr td {
     text-align: center;
+    width: 25%;
+}
+th, td{
+    padding: 5px;
 }
