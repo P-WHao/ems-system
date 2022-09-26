@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Employee Management System</title>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <link rel="stylesheet" href="https://phoonwenhao-employee.s3.amazonaws.com/static/css/Add.css" />
+  <link rel="stylesheet" href="Add.css" />
 </head>
 
 <body>
@@ -33,20 +33,20 @@
       <div class="inputSucess">
         <div class="wrapper">
           <div class="sucess">
-            <div class="alert_icon">
+            <div class="alert_icon" style="left: 43%;">
               <ion-icon name="close-circle-outline" class="icon_remove"></ion-icon>
             </div>
 
-            <div class="content_sucess">
+            <div class="content_sucess" style="left: 22%;">
               <p class="title">
-                Following employee had fail to add into employee database
+                Following Employee Existed, Fail to Add into Database
               </p>
-              <p class="sucess_info">{{ id }}</p>
+              <p class="sucess_info" style="margin: 10px 0px;">{{ id }}</p>
             </div>
           </div>
         </div>
         <a href="/addemp/">
-          <button type="submit" class="addAnotherEmp">Add Again</button>
+          <button type="submit" style="margin-top: 20px;" class="addAnotherEmp">Add Again</button>
         </a>
       </div>
     </div>
