@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
-    
+
 }
 
 .findEmp ul {
@@ -152,7 +152,7 @@
     top: 0;
 }
 
-.testing{
+.testing {
     height: 100px;
 
 }
@@ -195,7 +195,7 @@
     justify-content: center;
 }
 
-.inputDisplay{
+.inputDisplay {
     color: aliceblue;
     background-color: rgba(68, 67, 67, 0.5);
     width: 950px;
@@ -292,8 +292,8 @@ form {
     cursor: pointer;
 }
 
-.addEmp:hover{
-   background: black;
+.addEmp:hover {
+    background: black;
 }
 
 .wrapper {
@@ -307,9 +307,9 @@ form {
     position: relative;
 }
 
-.btn_backHome{
+.btn_backHome {
     position: relative;
-    cursor:pointer;
+    cursor: pointer;
     left: 230px;
     top: 150px;
     line-height: 40px;
@@ -321,13 +321,13 @@ form {
     width: 480px;
 }
 
-.btn_backHome:hover{
+.btn_backHome:hover {
     background: black;
 }
 
 .addAnotherEmp {
     position: relative;
-    cursor:pointer;
+    cursor: pointer;
     left: 150px;
     top: 150px;
     line-height: 40px;
@@ -339,7 +339,7 @@ form {
     width: 480px;
 }
 
-.addAnotherEmp:hover{
+.addAnotherEmp:hover {
     background: black;
 }
 
@@ -357,7 +357,7 @@ form {
     cursor: pointer;
 }
 
-.btn_dltEmp{
+.btn_dltEmp {
     position: absolute;
     left: 85%;
     top: 105%;
@@ -371,7 +371,7 @@ form {
     cursor: pointer;
 }
 
-.editEmp{
+.editEmp {
     position: absolute;
     top: 105%;
     line-height: 40px;
@@ -620,42 +620,36 @@ form {
     margin: auto;
 }
 
-.table{
-    background-color:#555;
-    width: 100%;
-    
-}
+.add_bar {
 
-.add_bar{
-    
     list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: #333;
     text-align: center;
-    
+
 
 }
 
 .add_bar li {
     display: inline-block;
-  }
-  
+}
+
 .add_bar li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  /* Change the link color to #111 (black) on hover */
+}
+
+/* Change the link color to #111 (black) on hover */
 .add_bar li a:hover {
     background-color: #111;
-  }
+}
 
-  
- .form-button2{
+
+.form-button2 {
     border-radius: 6px;
     padding: 10px;
     font-size: 16px;
@@ -664,8 +658,33 @@ form {
     cursor: pointer;
     text-align: center;
     justify-content: center;
- }
+}
 
- .form-button2:hover {
+.form-button2:hover {
     background: rgba(110, 110, 110, 0.404);
+}
+
+.table {
+    margin-top: 10px;
+    width: 100%;
+}
+
+thead {
+
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2%;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eee;
+}
+
+thead tr td {
+    text-align: center;
 }
